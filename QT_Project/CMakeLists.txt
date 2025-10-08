@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.19.0 FATAL_ERROR)
+cmake_minimum_required(VERSION 4.1.1 FATAL_ERROR)
 
 ############################################
 ### Project Configuration                ###
@@ -16,6 +16,9 @@ include(${CMAKE_SOURCE_DIR}/CMake/SanitizerConfig.cmake)
 ############################################
 ### Global Properties                    ###
 ############################################
+
+# Disable CMake searching for modules
+set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 
 # Global properties for project organization
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
@@ -222,10 +225,12 @@ target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets)
 include(${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty/Doxygen.cmake)
 
 if (WIN32)
-    if (CMAKE_BUILD_TYPE STREQUAL "Debug")
-        set_target_properties(${PROJECT_NAME} PROPERTIES 
-            LINK_FLAGS "/SUBSYSTEM:CONSOLE"
-        )
+    if (MSVC OR (CMAKE_CXX_COMPILER_ID STREQUAL "Clang" AND CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC"))
+        if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+            set_target_properties(${PROJECT_NAME} PROPERTIES
+                LINK_FLAGS "/SUBSYSTEM:CONSOLE"
+            )
+        endif()
     endif()
     set_target_properties(${PROJECT_NAME} PROPERTIES 
         WIN32_EXECUTABLE ON
