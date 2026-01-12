@@ -287,11 +287,11 @@ docker run -it qttemplate-dockerimage bash
 #### 3. Run the App or Tests in the Container
 - **Start the app (virtual display with Xvfb):**
 ```
-Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp & export DISPLAY=:99 "./_build_app_release/QT_Project/QtTemplate"
+Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp & export DISPLAY=:99 && ./_build_app_release/QT_Project/QtTemplate
 ```
 - **Run the tests (virtual display with Xvfb):**
 ```
-Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp & export DISPLAY=:99 "./_build_tests_release/QT_Project_Tests/QtTemplate_Tests"
+Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp & export DISPLAY=:99 && ./_build_tests_release/QT_Project_Tests/QtTemplate_Tests
 ```
 <br>
 
