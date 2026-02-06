@@ -22,8 +22,8 @@ auto main(int argc, char* argv[]) -> int
     QCoreApplication::setAttribute(Qt::AA_UseOpenGLES);
 
     QApplication app(argc, argv);
-    app.setApplicationName(QStringLiteral("QtApp"));
-    app.setOrganizationName(QStringLiteral("QtTemplate"));
+    app.setApplicationName(QStringLiteral("QtWidgetsApp"));
+    app.setOrganizationName(QStringLiteral("QtWidgetsTemplate"));
     app.setOrganizationDomain(QStringLiteral("AdrianHelbig.de"));
 
     // TODO: Add your main window or application logic here

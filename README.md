@@ -1,16 +1,16 @@
-# Qt Template
+# Qt Widgets Template
 
 ## 🚀 [Build Status]
 
 ### 🛠 Build and ✅ Test
 
-[![Linux Build and Test](https://github.com/Dingola/QtTemplate/actions/workflows/build_and_test_linux.yml/badge.svg)](https://github.com/Dingola/QtTemplate/actions/workflows/build_and_test_linux.yml)
-[![macOS Build and Test](https://github.com/Dingola/QtTemplate/actions/workflows/build_and_test_macos.yml/badge.svg)](https://github.com/Dingola/QtTemplate/actions/workflows/build_and_test_macos.yml)
-[![Windows Build and Test](https://github.com/Dingola/QtTemplate/actions/workflows/build_and_test_windows.yml/badge.svg)](https://github.com/Dingola/QtTemplate/actions/workflows/build_and_test_windows.yml)
+[![Linux Build and Test](https://github.com/Dingola/QtWidgetsTemplate/actions/workflows/build_and_test_linux.yml/badge.svg)](https://github.com/Dingola/QtWidgetsTemplate/actions/workflows/build_and_test_linux.yml)
+[![macOS Build and Test](https://github.com/Dingola/QtWidgetsTemplate/actions/workflows/build_and_test_macos.yml/badge.svg)](https://github.com/Dingola/QtWidgetsTemplate/actions/workflows/build_and_test_macos.yml)
+[![Windows Build and Test](https://github.com/Dingola/QtWidgetsTemplate/actions/workflows/build_and_test_windows.yml/badge.svg)](https://github.com/Dingola/QtWidgetsTemplate/actions/workflows/build_and_test_windows.yml)
 
 ### Code Coverage
 
-[![codecov](https://codecov.io/gh/Dingola/QtTemplate/graph/badge.svg?token=2JLLHLTQYN)](https://codecov.io/gh/Dingola/QtTemplate)
+[![codecov](https://codecov.io/gh/Dingola/QtWidgetsTemplate/graph/badge.svg?token=2JLLHLTQYN)](https://codecov.io/gh/Dingola/QtWidgetsTemplate)
 
 <br><br>
 
@@ -51,9 +51,9 @@ generation with Doxygen, and includes GitHub workflows (CI builds) for both Linu
 
 | Graph     | Description                                                                                                                                                                                                                     | Visualization                                                                 |
 |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| **Sunburst** | The inner-most circle represents the entire project. Moving outward are folders, and finally individual files. The size and color of each slice represent the number of statements and the coverage, respectively. | <img src="https://codecov.io/gh/Dingola/QtTemplate/graphs/sunburst.svg?token=2JLLHLTQYN" alt="Sunburst" height="100" width="200"> |
-| **Grid**     | Each block represents a single file in the project. The size and color of each block represent the number of statements and the coverage, respectively.                                                                      | <img src="https://codecov.io/gh/Dingola/QtTemplate/graphs/tree.svg?token=2JLLHLTQYN" alt="Grid" height="100" width="200">         |
-| **Icicle**   | The top section represents the entire project, followed by folders and individual files. The size and color of each slice represent the number of statements and the coverage, respectively.                                 | <img src="https://codecov.io/gh/Dingola/QtTemplate/graphs/icicle.svg?token=2JLLHLTQYN" alt="Icicle" height="150" width="400">     |
+| **Sunburst** | The inner-most circle represents the entire project. Moving outward are folders, and finally individual files. The size and color of each slice represent the number of statements and the coverage, respectively. | <img src="https://codecov.io/gh/Dingola/QtWidgetsTemplate/graphs/sunburst.svg?token=2JLLHLTQYN" alt="Sunburst" height="100" width="200"> |
+| **Grid**     | Each block represents a single file in the project. The size and color of each block represent the number of statements and the coverage, respectively.                                                                      | <img src="https://codecov.io/gh/Dingola/QtWidgetsTemplate/graphs/tree.svg?token=2JLLHLTQYN" alt="Grid" height="100" width="200">         |
+| **Icicle**   | The top section represents the entire project, followed by folders and individual files. The size and color of each slice represent the number of statements and the coverage, respectively.                                 | <img src="https://codecov.io/gh/Dingola/QtWidgetsTemplate/graphs/icicle.svg?token=2JLLHLTQYN" alt="Icicle" height="150" width="400">     |
 
 <br><br>
 
@@ -218,8 +218,8 @@ Once you have generated the required tokens, add them as secrets in your GitHub 
 
 ### 2) Setting up
 ```
-git clone https://github.com/Dingola/QtTemplate.git
-cd QtTemplate/
+git clone https://github.com/Dingola/QtWidgetsTemplate.git
+cd QtWidgetsTemplate/
 ```
 <br>
 
@@ -241,8 +241,8 @@ cmake --build . --config Release
 
 ### 4) Run the project
 ```
-cd QtTemplate/Release/
-./QtTemplate.exe
+cd QtWidgetsTemplate/Release/
+./QtWidgetsTemplate.exe
 ```
 <br>
 
@@ -269,29 +269,29 @@ To create an NSIS installer (Windows only), set `BUILD_NSIS_INSTALLER` to `true`
 #### 1. Build the Docker Image
 Build the Docker image using the following command:
 ```
-docker build -t qttemplate-dockerimage .
+docker build -t qtwidgetstemplate-dockerimage .
 ```
 <br>
 
 #### 2. Ways to Run the Docker Image
 - **Run directly:**
 ```
-docker run qttemplate-dockerimage
+docker run qtwidgetstemplate-dockerimage
 ```
 - **Start an interactive Bash shell:**
 ```
-docker run -it qttemplate-dockerimage bash
+docker run -it qtwidgetstemplate-dockerimage bash
 ```
 <br>
 
 #### 3. Run the App or Tests in the Container
 - **Start the app (virtual display with Xvfb):**
 ```
-Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp & export DISPLAY=:99 && ./_build_app_release/QT_Project/QtTemplate
+Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp & export DISPLAY=:99 && ./_build_app_release/QT_Project/QtWidgetsTemplate
 ```
 - **Run the tests (virtual display with Xvfb):**
 ```
-Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp & export DISPLAY=:99 && ./_build_tests_release/QT_Project_Tests/QtTemplate_Tests
+Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp & export DISPLAY=:99 && ./_build_tests_release/QT_Project_Tests/QtWidgetsTemplate_Tests
 ```
 <br>
 
@@ -304,7 +304,7 @@ Xvfb :99 -screen 0 1920x1080x24 -nolisten tcp & export DISPLAY=:99 && ./_build_t
    - Alternatively, use the preconfigured `config.xlaunch` file located in the `Configs` folder of this project. Double-click the file to launch VcXsrv with the correct settings.
 3. Start the Docker container:
 ```
-docker run -it --name QtTemplate-Container --network host -e DISPLAY=<IP-ADDRESS>:99.0 -e TERM=xterm-256color -e QT_X11_NO_MITSHM=1 QtTemplate-DockerImage bash
+docker run -it --name QtWidgetsTemplate-Container --network host -e DISPLAY=<IP-ADDRESS>:99.0 -e TERM=xterm-256color -e QT_X11_NO_MITSHM=1 QtWidgetsTemplate-DockerImage bash
 ```
 > [!NOTE]
 > Replace `<IP-ADDRESS>` with the host's IP address (e.g., `192.168.1.2`). Do not use `127.0.0.1` or `localhost`.
@@ -312,11 +312,11 @@ docker run -it --name QtTemplate-Container --network host -e DISPLAY=<IP-ADDRESS
 4. Inside the container:
 - **Start the app:**
 ```
-"./_build_app_release/QT_Project/QtTemplate"
+"./_build_app_release/QT_Project/QtWidgetsTemplate"
 ```
 - **Run the tests:**
 ```
-"./_build_tests_release/QT_Project_Tests/QtTemplate_Tests"
+"./_build_tests_release/QT_Project_Tests/QtWidgetsTemplate_Tests"
 ```
 <br>
 
@@ -338,7 +338,7 @@ export DISPLAY=192.168.1.2:99.0
 <br><br><br>
 
 ## [Translations]
-The project includes custom targets for updating and compiling translation files. These targets are defined in the CMake file located in `QtTemplate/QT_Project` and can be used to manage translation files located in the `QtTemplate/QT_Project/resources/Translations` directory.
+The project includes custom targets for updating and compiling translation files. These targets are defined in the CMake file located in `QtWidgetsTemplate/QT_Project` and can be used to manage translation files located in the `QtWidgetsTemplate/QT_Project/resources/Translations` directory.
 
 > [!NOTE]
 > The translation files are specified in the CMake file. Initially, only `app_de.ts` and `app_en.ts` are included. To support additional languages, you will need to add the corresponding `.ts` files to the CMake configuration.
